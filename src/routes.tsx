@@ -1,15 +1,16 @@
 import React, { Suspense, Fragment, lazy, Requireable, ReactNode, ReactElement, LazyExoticComponent } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-
+import Public from './guard/public';
+import Privat from './guard/private';
 import Loader from './components/Loader/Loader';
 import AdminLayout from './layouts/AdminLayout';
 
 interface routesTypes  {
-  exact: string;
+  exact?: string;
   path: string;
   element?: React.LazyExoticComponent<() => JSX.Element>;
   routes?: Array<routesTypes>;
-  guard?: string;
+  guard?: any;
   layout?: {
     ({ children }: {
         children: any;
@@ -50,26 +51,27 @@ export const routes : Array<routesTypes>  = [
   {
     exact: 'true',
     path: '/login',
-    element: lazy(() => import('./views/auth/signin/SignIn1'))
+    guard: Public,
+    element: lazy(() => import('./views/auth/signin/SignIn'))
+  },
+  {
+    path: '/auth/signin',
+    element: lazy(() => import('./views/auth/signin/SignIn'))
   },
   {
     exact: 'true',
-    path: '/auth/signin-1',
-    element: lazy(() => import('./views/auth/signin/SignIn1'))
-  },
-  {
-    exact: 'true',
-    path: '/auth/signup-1',
+    path: '/auth/signup',
     element: lazy(() => import('./views/auth/signup/SignUp1'))
   },
   {
     exact: 'true',
-    path: '/auth/reset-password-1',
-    element: lazy(() => import('./views/auth/reset-password/ResetPassword1'))
+    path: '/auth/reset-password',
+    element: lazy(() => import('./views/auth/reset-password/ResetPassword'))
   },
   {
     path: '*',
     layout: AdminLayout,
+    guard: Privat,
     routes: [
       {
         exact: 'true',

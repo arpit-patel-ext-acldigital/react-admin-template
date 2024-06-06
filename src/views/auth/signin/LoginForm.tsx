@@ -5,13 +5,13 @@ import { Row, Col, Button, Alert } from 'react-bootstrap';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
 
-const FirebaseLogin = ({ className, ...rest }) => {
+const FirebaseLogin = ({ className, ...rest }: { className: string }) => {
   return (
     <React.Fragment>
       <Formik
         initialValues={{
-          email: 'info@codedthemes.com',
-          password: '123456',
+          email: '',
+          password: '',
           submit: null
         }}
         validationSchema={Yup.object().shape({
@@ -24,7 +24,7 @@ const FirebaseLogin = ({ className, ...rest }) => {
             <div className="form-group mb-3">
               <input
                 className="form-control"
-                label="Email Address / Username"
+                placeholder="Email Address / Username"
                 name="email"
                 onBlur={handleBlur}
                 onChange={handleChange}
@@ -36,7 +36,7 @@ const FirebaseLogin = ({ className, ...rest }) => {
             <div className="form-group mb-4">
               <input
                 className="form-control"
-                label="Password"
+                placeholder="Password"
                 name="password"
                 onBlur={handleBlur}
                 onChange={handleChange}

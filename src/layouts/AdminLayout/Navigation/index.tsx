@@ -40,7 +40,7 @@ const Navigation = () => {
   }
   return (
     <React.Fragment>
-      <nav className={navClass.join(' ')}>{navContent}</nav>
+      <nav className={navClass.join(' ')} style={{"overflowX": "auto"}}>{navContent}</nav>
     </React.Fragment>
   );
 };

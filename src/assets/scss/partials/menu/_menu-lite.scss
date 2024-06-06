@@ -528,7 +528,13 @@
   position: fixed;
   transition: all 0.3s ease-in-out;
   box-shadow: 1px 0 20px 0 rgb(63, 77, 103);
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
   ul {
     padding-left: 0;
     list-style: none;

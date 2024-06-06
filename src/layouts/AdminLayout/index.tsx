@@ -44,7 +44,7 @@ const AdminLayout = ({ children }) => {
 
   let common = (
     <React.Fragment>
-      <Navigation />
+      <Navigation/>
       <NavBar />
     </React.Fragment>
   );
