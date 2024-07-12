@@ -50,22 +50,22 @@ export const routes : Array<routesTypes>  = [
   {
     exact: 'true',
     path: '/login',
-    element: lazy(() => import('./views/auth/signin/SignIn1'))
+    element: lazy(() => import('./views/auth/signin/SignIn'))
   },
   {
     exact: 'true',
-    path: '/auth/signin-1',
-    element: lazy(() => import('./views/auth/signin/SignIn1'))
+    path: '/auth/signin',
+    element: lazy(() => import('./views/auth/signin/SignIn'))
   },
   {
     exact: 'true',
-    path: '/auth/signup-1',
+    path: '/auth/signup',
     element: lazy(() => import('./views/auth/signup/SignUp1'))
   },
   {
     exact: 'true',
-    path: '/auth/reset-password-1',
-    element: lazy(() => import('./views/auth/reset-password/ResetPassword1'))
+    path: '/auth/reset-password',
+    element: lazy(() => import('./views/auth/reset-password/ResetPassword'))
   },
   {
     path: '*',

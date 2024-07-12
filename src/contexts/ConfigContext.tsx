@@ -95,7 +95,6 @@ const ConfigProvider = ({ children }) => {
         throw new Error();
     }
   }, initialState);
-
   return <Provider value={{ state, dispatch }}>{children}</Provider>;
 };
 
@@ -103,6 +102,5 @@ ConfigProvider.propTypes = {
   children: PropTypes.object
 };
 
-console.log({ ConfigContext, ConfigProvider })
 
 export { ConfigContext, ConfigProvider };

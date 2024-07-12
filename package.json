@@ -15,6 +15,7 @@
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
     "dotenv": "^16.4.5",
+    "formik": "^2.4.6",
     "process": "^0.11.10",
     "react": "^18.2.0",
     "react-app-polyfill": "^3.0.0",
@@ -28,10 +29,12 @@
     "react-router-dom": "^6.23.1",
     "redux-logger": "^3.0.6",
     "rodal": "^2.1.0",
-    "styled-components": "^6.1.11"
+    "styled-components": "^6.1.11",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
+    "@types/react-copy-to-clipboard": "^5.0.7",
     "@types/react-dom": "^18.2.22",
     "@types/redux-logger": "^3.0.13",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
