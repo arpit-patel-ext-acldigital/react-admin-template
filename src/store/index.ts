@@ -5,7 +5,7 @@ import logger from 'redux-logger'
 
 const store = configureStore({
     reducer : reducers,
-    devTools: true,
+    // devTools: true,
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 })
 export const useSelector = useReduxSelector;
